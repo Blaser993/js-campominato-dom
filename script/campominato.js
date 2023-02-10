@@ -6,6 +6,8 @@ const LIMITEBOMBE = 16
 
 let numeroCelle = LATOGRIGLIA * LATOGRIGLIA
 
+let casellaBomba
+
 const start = document.getElementById("play");
 start.addEventListener ("click", 
 
@@ -24,9 +26,13 @@ function() {
         griglia.append(creoCella)
         creoCella.classList.add("cella")
 
-        creoCella.addEventListener ("click",
+        creoCella.addEventListener ("click", 
         function(){
-        creoCella.classList.add("dark")
+
+        if (bombe.includes.this){
+            console.log(casellaBomba)
+            creoCella.classList.add("red");
+        }   else creoCella.classList.add("dark")
         })
 
 
@@ -49,7 +55,7 @@ const bombe = []
 
 
 while (bombe.length < LIMITEBOMBE ){
-    let casellaBomba = Math.floor(Math.random(+1)* numeroCelle)
+    casellaBomba = Math.floor(Math.random(+1)* numeroCelle)
     console.log(casellaBomba, "numero della bomba")
 
     if (bombe.includes(casellaBomba)){
