@@ -45,10 +45,23 @@ function() {
 
 const bombe = []
 
-while (bombe.lenght < LATOGRIGLIA){
-    let casellaBomba = (Math.random(1) * numeroCelle)
-    console.log(casellaBomba, bombe.length, bombe, "numero della bomba")
-    bombe.push(casellaBomba)
+limiteBombe = LATOGRIGLIA > bombe.length
+
+limiteBombe = false
+
+console.log(limiteBombe)
+
+
+while (bombe.length < LATOGRIGLIA ){
+    let casellaBomba = Math.floor(Math.random(+1)* numeroCelle)
+    console.log(casellaBomba, "numero della bomba")
+
+    if (bombe.includes(casellaBomba)){
+        continue;
+    }   else bombe.push(casellaBomba)
+    
+
 }
 
 console.log(bombe, "numeri delle bombe")
+
