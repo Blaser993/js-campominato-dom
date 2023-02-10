@@ -29,8 +29,9 @@ function() {
         creoCella.addEventListener ("click", 
         function(){
 
-        if (bombe.includes.this){
-            console.log(casellaBomba)
+            
+
+        if (bombe.includes(parseInt(this.innerHTML))){
             creoCella.classList.add("red");
         }   else creoCella.classList.add("dark")
         })
