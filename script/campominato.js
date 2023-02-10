@@ -2,6 +2,8 @@ console.log("BOOM!");
 
 const LATOGRIGLIA = 10
 
+const LIMITEBOMBE = 16
+
 let numeroCelle = LATOGRIGLIA * LATOGRIGLIA
 
 const start = document.getElementById("play");
@@ -45,22 +47,14 @@ function() {
 
 const bombe = []
 
-limiteBombe = LATOGRIGLIA > bombe.length
 
-limiteBombe = false
-
-console.log(limiteBombe)
-
-
-while (bombe.length < LATOGRIGLIA ){
+while (bombe.length < LIMITEBOMBE ){
     let casellaBomba = Math.floor(Math.random(+1)* numeroCelle)
     console.log(casellaBomba, "numero della bomba")
 
     if (bombe.includes(casellaBomba)){
         continue;
     }   else bombe.push(casellaBomba)
-    
-
 }
 
 console.log(bombe, "numeri delle bombe")
