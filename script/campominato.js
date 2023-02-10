@@ -32,15 +32,30 @@ function() {
             
 
         if (bombe.includes(parseInt(this.innerHTML))){
+            
             creoCella.classList.add("red");
+            
+
+
         }   else creoCella.classList.add("dark")
         })
+        fineGioco ()
+        console.dir(fineGioco)
 
 
         creoCella.append(i)
     }
 
 })
+
+const fineGioco = function gameOver (){
+    creoCella = document.querySelectorAll("cella")
+    creoCella.removeEventListener("click", function(){
+        console.log("gameover")
+    })
+}
+
+
 
 // Generiamo le bombe
 // Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe, facendo attenzione che:
